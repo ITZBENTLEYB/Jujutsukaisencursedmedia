@@ -1,0 +1,29 @@
+// Handle Login
+document.getElementById("login-btn").addEventListener("click", function() {
+    const username = document.getElementById("login-username").value;
+    const password = document.getElementById("login-password").value;
+
+    // Log to check the stored users in localStorage
+    console.log("Users in LocalStorage:", users);
+
+    currentUser = users.find(user => user.username === username && user.password === password);
+
+    // Debug: Log the result of the login attempt
+    console.log("Current User:", currentUser);
+
+    if (currentUser) {
+        // Hide auth section and show content creation section
+        authSection.style.display = "none";
+        profileSection.style.display = "block";
+        contentCreateSection.style.display = "block";
+        socialFeedSection.style.display = "block";
+        friendsSection.style.display = "block";
+        dmSection.style.display = "block";
+        loadFeed();
+        loadProfile();
+        loadFriends();
+        loadDMs();
+    } else {
+        alert("Invalid login credentials.");
+    }
+});

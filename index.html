@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial
+    <meta name="google-site-verification" content="eod_M9rntWZrYGdaBkBImQWQgQkxxnrFpfmZSBRNgj4" />
+    -scale=1.0">
+    <title>Jujutsu Kaisen Cursed Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <h1>Jujutsu Kaisen Cursed Media</h1>
+            <p>Your portal to content creation & social interaction!</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Authentication Section (Login/Register) -->
+        <section id="auth">
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button id="login-btn">Login</button>
+                <p>Don't have an account? <a href="#" id="show-register">Register Here</a></p>
+            </div>
+            
+            <div id="register-form" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <button id="register-btn">Register</button>
+                <p>Already have an account? <a href="#" id="show-login">Login Here</a></p>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" style="display: none;">
+            <h2>Your Profile</h2>
+            <img id="profile-pic" src="default-avatar.jpg" alt="Profile Picture" width="100">
+            <input type="file" id="upload-profile-pic">
+            <input type="text" id="profile-username" placeholder="Username">
+            <textarea id="profile-bio" placeholder="Your bio..."></textarea>
+            <button id="save-profile">Save Profile</button>
+        </section>
+
+        <!-- Video Upload Section -->
+        <section id="content-create" style="display: none;">
+            <h2>Upload Your Cursed Media Video</h2>
+            <input type="file" id="video-upload" accept="video/*">
+            <textarea id="video-description" placeholder="Describe your cursed media video..."></textarea>
+            <button id="submit-video">Upload Video</button>
+        </section>
+
+        <!-- Social Feed Section -->
+        <section id="social-feed" style="display: none;">
+            <h2>Social Feed</h2>
+            <div id="feed"></div>
+        </section>
+
+        <!-- Friend System Section -->
+        <section id="friends-section" style="display: none;">
+            <h2>Your Friends</h2>
+            <input type="text" id="friend-username" placeholder="Add a friend (Username)">
+            <button id="add-friend">Add Friend</button>
+            <div id="friends-list"></div>
+        </section>
+
+        <!-- Direct Messaging Section -->
+        <section id="dm-section" style="display: none;">
+            <h2>Direct Messages</h2>
+            <div id="dm-threads"></div>
+            <input type="text" id="send-dm-username" placeholder="Username to DM">
+            <textarea id="dm-message" placeholder="Type your message..."></textarea>
+            <button id="send-dm">Send DM</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by Jujutsu Kaisen Cursed Media</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
